@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESCO Heating & Cooling Inc. | Commercial & Industrial HVAC Solutions</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#004B9B',
+              navy: '#0A1E3F',
+              red: '#E31B23',
+              lightGray: '#F4F6F9'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-slate-800 bg-white selection:bg-brand-red selection:text-white">
+
+  <!-- TOP EMERGENCY & DISPATCH BAR -->
+  <div class="bg-brand-navy text-white text-xs md:text-sm py-2.5 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4 text-slate-300">
+        <span><i class="fa-solid fa-location-dot text-brand-red mr-1.5"></i> Capital Region & Surrounding Areas</span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-certificate text-brand-blue mr-1.5"></i> EPA Certified | Licensed & Insured Mechanical Contractors</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-brand-red uppercase tracking-wider text-xs">24/7 Dispatch & Service:</span>
+        <a href="tel:5184820375" class="font-black text-white hover:text-brand-red tracking-wider text-sm transition">
+          (518) 482-0375
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER WITH LOGO -->
+  <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
+      
+      <!-- ESCO Official Logo -->
+      <a href="#" class="flex items-center">
+        <img 
+          src="large.jpg" 
+          alt="ESCO Heating & Cooling Inc. Logo" 
+          class="h-14 sm:h-16 w-auto object-contain"
+        />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-700 text-sm">
+        <a href="#services" class="hover:text-brand-blue transition">Services</a>
+        <a href="#projects" class="hover:text-brand-blue transition">Recent Projects</a>
+        <a href="#testimonials" class="hover:text-brand-blue transition">Testimonials</a>
+        <a href="#about" class="hover:text-brand-blue transition">About ESCO</a>
+        <a href="#contact" class="hover:text-brand-blue transition">Contact</a>
+      </nav>
+
+      <!-- Header CTA & Phone -->
+      <div class="flex items-center gap-4">
+        <a href="tel:5184820375" class="hidden lg:flex flex-col text-right leading-tight">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Call Directly</span>
+          <span class="text-base font-black text-brand-blue hover:text-brand-red transition">(518) 482-0375</span>
+        </a>
+        <a href="#contact" class="bg-brand-red hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-md shadow transition text-sm flex items-center gap-2">
+          <span>Get An Estimate</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-brand-navy text-white py-20 lg:py-28 overflow-hidden">
+    <!-- Background visual layer -->
+    <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#004B9B_1px,transparent_1px)] [background-size:20px_20px]"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-slate-200 text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-sm">
+          <i class="fa-solid fa-screwdriver-wrench text-brand-red"></i> Capital Region's Commercial HVAC Experts
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6">
+          Commercial & Industrial Mechanical Climate Solutions.
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed font-normal">
+          From multi-ton RTU crane replacements to high-efficiency chilled water plants and preventive maintenance agreements, ESCO keeps your buildings operating at peak performance.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contact" class="inline-flex items-center justify-center bg-brand-red hover:bg-red-700 text-white font-bold px-8 py-4 rounded-lg shadow-lg transition text-base">
+            Request an Estimate or RFP
+            <i class="fa-solid fa-chevron-right ml-2.5 text-xs"></i>
+          </a>
+          <a href="tel:5184820375" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-bold px-7 py-4 rounded-lg border border-white/20 transition text-base backdrop-blur-sm">
+            <i class="fa-solid fa-phone mr-2.5 text-brand-red"></i> Call (518) 482-0375
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK STATS BAR -->
+  <section class="bg-brand-blue text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-blue-400/30">
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl font-black">24/7/365</div>
+          <p class="text-xs uppercase tracking-wider text-blue-100 mt-1 font-semibold">Priority Commercial Dispatch</p>
+        </div>
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl font-black">Custom SLAs</div>
+          <p class="text-xs uppercase tracking-wider text-blue-100 mt-1 font-semibold">Preventive Maintenance Plans</p>
+        </div>
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl font-black">100% Certified</div>
+          <p class="text-xs uppercase tracking-wider text-blue-100 mt-1 font-semibold">EPA & Mechanical Technicians</p>
+        </div>
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl font-black">Turnkey Service</div>
+          <p class="text-xs uppercase tracking-wider text-blue-100 mt-1 font-semibold">Design, Crane Lifts & Installs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALIZED COMMERCIAL SERVICES -->
+  <section id="services" class="py-20 bg-brand-lightGray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-black uppercase tracking-widest text-brand-red">Our Capabilities</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">Specialized Commercial Services</h2>
+        <div class="w-16 h-1 bg-brand-blue mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-snowflake"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Chiller Systems & Cooling Plants</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Comprehensive diagnostic maintenance, tube brushing, leak detection, and seasonal startup for large centrifugal and air-cooled chiller plants.
+            </p>
+          </div>
+          <a href="#contact" class="text-brand-blue font-bold text-sm hover:text-brand-red inline-flex items-center gap-1.5 transition">
+            Learn More <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Rooftop Units (RTUs)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Turnkey crane lifts, curb curb adaptations, emergency compressor replacements, and high-efficiency economizer retrofits.
+            </p>
+          </div>
+          <a href="#contact" class="text-brand-blue font-bold text-sm hover:text-brand-red inline-flex items-center gap-1.5 transition">
+            Learn More <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-drafting-compass"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Design-Build & Retrofit Solutions</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Custom mechanical system engineering, tenant fit-outs, commercial ventilation balancing, and VRF heat recovery design.
+            </p>
+          </div>
+          <a href="#contact" class="text-brand-blue font-bold text-sm hover:text-brand-red inline-flex items-center gap-1.5 transition">
+            Learn More <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT PROJECTS / PHOTO GALLERY -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-black uppercase tracking-widest text-brand-red">Proven Experience</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">Recent Commercial Projects</h2>
+        </div>
+        <p class="text-slate-500 text-sm mt-3 md:mt-0 max-w-md">
+          A glimpse into the heavy mechanical equipment installations, industrial sheet metal ductwork, and modular systems we manage.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Project 1 -->
+        <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
+          <img 
+            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" 
+            alt="Commercial Rooftop Packaged Units" 
+            class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Installation</span>
+            <h4 class="text-base font-bold text-white leading-snug">Multi-Zone RTU Crane Replacement</h4>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
+          <img 
+            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=700&q=80" 
+            alt="Commercial Industrial Chiller Plant" 
+            class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Central Plant</span>
+            <h4 class="text-base font-bold text-white leading-snug">High-Tonnage Water-Cooled Chiller</h4>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
+          <img 
+            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=700&q=80" 
+            alt="Spiral and Rectangular Commercial Ductwork" 
+            class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Ventilation</span>
+            <h4 class="text-base font-bold text-white leading-snug">Custom Industrial Duct Fabrication</h4>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
+          <img 
+            src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=700&q=80" 
+            alt="Commercial Condensing and VRF Heat Recovery" 
+            class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Efficiency</span>
+            <h4 class="text-base font-bold text-white leading-snug">Modular VRF System & Heat Recovery</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="py-20 bg-brand-lightGray border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-black uppercase tracking-widest text-brand-red">Client Feedback</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">What Facility Managers Say</h2>
+        <div class="w-16 h-1 bg-brand-blue mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-7 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="text-amber-400 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed italic">
+              "When our building’s RTU failed in mid-summer heat, ESCO had a crane on site and a replacement operational faster than any other contractor quoted. Exceptional commercial team."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <h4 class="font-bold text-slate-900 text-sm">Marcus Vance</h4>
+            <p class="text-xs text-slate-500">Commercial Property Director</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-7 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="text-amber-400 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed italic">
+              "ESCO manages our quarterly preventive maintenance across three warehousing facilities. We haven't had a single unpredicted shutdown since signing on with them."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <h4 class="font-bold text-slate-900 text-sm">David Lin</h4>
+            <p class="text-xs text-slate-500">Distribution Facility Operations</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-7 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="text-amber-400 text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed italic">
+              "Their design-build team worked seamlessly with our general contractor during our office renovation. Professional, compliant, and delivered on schedule."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <h4 class="font-bold text-slate-900 text-sm">Sarah Jenkins</h4>
+            <p class="text-xs text-slate-500">VP of Building Infrastructure</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & ESTIMATE FORM SECTION -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Contact Information -->
+        <div class="lg:col-span-5">
+          <span class="text-xs font-black uppercase tracking-widest text-brand-red">Direct Contact</span>
+          <h2 class="text-3xl font-black text-slate-900 mt-1 mb-4">Request An Estimate Or Commercial Service</h2>
+          <p class="text-slate-600 mb-8 leading-relaxed text-sm">
+            Whether you need urgent mechanical repair, an audit on an aging chiller, or a formal bid proposal, contact ESCO Heating & Cooling today.
+          </p>
+
+          <div class="space-y-4 text-sm text-slate-700">
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-lightGray border border-slate-200">
+              <div class="w-10 h-10 rounded-lg bg-brand-blue text-white flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">Commercial Dispatch & Office</div>
+                <a href="tel:5184820375" class="text-base font-black text-brand-blue hover:text-brand-red transition">
+                  (518) 482-0375
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-lightGray border border-slate-200">
+              <div class="w-10 h-10 rounded-lg bg-brand-blue text-white flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">Email Inquiries</div>
+                <a href="mailto:info@escohvac.com" class="text-sm font-semibold text-brand-blue hover:text-brand-red transition">
+                  info@escohvac.com
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-lightGray border border-slate-200">
+              <div class="w-10 h-10 rounded-lg bg-brand-blue text-white flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">Hours of Service</div>
+                <p class="text-xs text-slate-600 mt-0.5">Emergency Commercial Service: 24/7/365<br>Office: Mon – Fri: 7:30 AM – 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Working Form: Sends directly to info@escohvac.com -->
+        <div class="lg:col-span-7 bg-brand-lightGray p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm">
+          <form action="https://formsubmit.co/info@escohvac.com" method="POST" class="space-y-4">
+            
+            <!-- Hidden configuration for FormSubmit -->
+            <input type="hidden" name="_subject" value="New Website Inquiry - ESCO Heating & Cooling">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Your Name *</label>
+                <input type="text" name="name" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="John Doe" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Company / Facility *</label>
+                <input type="text" name="company" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Acme Logistics LLC" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Work Email *</label>
+                <input type="email" name="email" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="jdoe@company.com" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Phone Number *</label>
+                <input type="tel" name="phone" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="(518) 000-0000" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Type of Commercial Service</label>
+              <select name="service_type" class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none">
+                <option>Commercial Repair / Diagnostics</option>
+                <option>Preventive Maintenance Contract</option>
+                <option>Rooftop Unit (RTU) Replacement</option>
+                <option>Chiller / Cooling Tower Service</option>
+                <option>Design-Build / General Bid RFP</option>
+                <option>Other Service</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Project Scope or Equipment Notes</label>
+              <textarea name="message" rows="4" class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Provide equipment models, problem symptoms, or bid deadlines..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-brand-red hover:bg-red-700 text-white font-black py-4 rounded-lg shadow-md transition text-base uppercase tracking-wider">
+              Submit Commercial Request
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy text-slate-400 py-12 border-t border-slate-800 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-3">
+        <img src="large.jpg" alt="ESCO" class="h-8 w-auto brightness-200 contrast-200 grayscale opacity-80" />
+        <div>
+          © 2026 ESCO Heating & Cooling Inc. All rights reserved.
+        </div>
+      </div>
+      <div>
+        Direct Dispatch: <a href="tel:5184820375" class="text-white font-bold hover:underline">(518) 482-0375</a> | <a href="mailto:info@escohvac.com" class="text-white hover:underline">info@escohvac.com</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
