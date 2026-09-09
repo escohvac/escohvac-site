@@ -95,7 +95,6 @@
 
   <!-- HERO SECTION WITH BACKGROUND PHOTO -->
   <section class="relative bg-slate-900 text-white py-24 lg:py-32 overflow-hidden">
-    <!-- Hero Background Image Matching Preview Mockup -->
     <div class="absolute inset-0">
       <img 
         src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1600&q=80" 
@@ -160,62 +159,81 @@
         <span class="text-xs font-black uppercase tracking-widest text-brand-red">Industry Partnerships</span>
         <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Authorized Commercial Brands We Install & Service</h2>
         <p class="text-slate-500 text-xs sm:text-sm mt-2">
-          Factory-trained diagnostics, certified warranty replacements, and OEM parts for the nation's leading commercial HVAC systems.
+          Factory-trained diagnostics, certified warranty replacements, BMS integrations, and OEM parts for premier manufacturers.
         </p>
       </div>
 
-      <!-- Real Brands Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center">
+      <!-- 6-Brand Responsive Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 items-center">
         
-        <!-- 1. Carrier Official Logo -->
-        <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
-          <svg viewBox="0 0 250 100" class="h-12 w-auto max-w-[130px] group-hover:scale-105 transition duration-300">
-            <ellipse cx="125" cy="50" rx="115" ry="42" fill="#003882"/>
-            <ellipse cx="125" cy="50" rx="111" ry="38" fill="none" stroke="#ffffff" stroke-width="2.5"/>
-            <ellipse cx="125" cy="50" rx="106" ry="33" fill="none" stroke="#003882" stroke-width="1.5"/>
-            <text x="125" y="61" font-family="'Times New Roman', Georgia, serif" font-size="37" font-style="italic" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">Carrier</text>
-          </svg>
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-brand-blue">Commercial RTUs</span>
+        <!-- 1. Carrier -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
+          <img 
+            src="https://brandportal.carrier.com/m/99b434eac013f6f/webimage-carrier_logo_rgb.png" 
+            alt="Carrier Commercial HVAC" 
+            class="h-10 w-auto max-w-[115px] object-contain group-hover:scale-105 transition duration-300"
+            onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/b/b3/Carrier_Logo.svg';"
+          />
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-brand-blue">Carrier</span>
         </div>
 
-        <!-- 2. Trane Official Logo -->
-        <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
-          <svg viewBox="0 0 240 60" class="h-9 w-auto max-w-[140px] group-hover:scale-105 transition duration-300">
+        <!-- 2. Trane -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
+          <svg viewBox="0 0 240 60" class="h-8 w-auto max-w-[125px] group-hover:scale-105 transition duration-300">
             <rect x="5" y="6" width="48" height="48" rx="4" fill="#ED1C24" />
             <circle cx="29" cy="30" r="16" fill="none" stroke="#ffffff" stroke-width="4.5" />
             <polygon points="25,20 38,30 25,40" fill="#ffffff" />
             <text x="66" y="44" font-family="'Arial Black', Impact, sans-serif" font-size="38" font-weight="900" fill="#ED1C24" letter-spacing="-1">TRANE</text>
           </svg>
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-brand-red">IntelliPak & Chillers</span>
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-brand-red">Trane</span>
         </div>
 
-        <!-- 3. York Official Logo -->
-        <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
-          <svg viewBox="0 0 230 60" class="h-9 w-auto max-w-[135px] group-hover:scale-105 transition duration-300">
-            <rect x="4" y="6" width="48" height="48" rx="5" fill="#003A70" />
-            <path d="M28 14 L28 46 M16 30 L40 30 M19 21 L37 39 M19 39 L37 21" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="28" cy="30" r="3.5" fill="#003A70" stroke="#ffffff" stroke-width="2"/>
-            <text x="64" y="44" font-family="'Helvetica Neue', Arial, sans-serif" font-size="40" font-weight="900" fill="#003A70" letter-spacing="1">YORK</text>
-          </svg>
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#003A70]">Industrial Systems</span>
+        <!-- 3. York -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
+          <img 
+            src="https://www.york.com/-/media/project/jci-global/york-sites/united-states-york/brand-logos/york_full_color_logo.png?la=en&h=95&w=391&hash=DAD2B59C598AE134604DB7DC9FF5DED0" 
+            alt="York Commercial HVAC" 
+            class="h-10 w-auto max-w-[120px] object-contain group-hover:scale-105 transition duration-300"
+            onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/e/eb/York_International_logo.svg';"
+          />
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#003A70]">York</span>
         </div>
 
-        <!-- 4. Lennox Official Logo -->
-        <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
-          <svg viewBox="0 0 240 60" class="h-9 w-auto max-w-[140px] group-hover:scale-105 transition duration-300">
+        <!-- 4. Johnson Controls -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
+          <img 
+            src="https://1000logos.net/wp-content/uploads/2022/06/Johnson-Controls-logo.png" 
+            alt="Johnson Controls Building Solutions" 
+            class="h-10 w-auto max-w-[125px] object-contain group-hover:scale-105 transition duration-300"
+            onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/0/07/Johnson_Controls_logo.svg';"
+          />
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-brand-blue">Johnson Controls</span>
+        </div>
+
+        <!-- 5. Lennox -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
+          <svg viewBox="0 0 240 60" class="h-8 w-auto max-w-[125px] group-hover:scale-105 transition duration-300">
             <polygon points="12,52 232,52 220,8 0,8" fill="#C8102E"/>
             <text x="116" y="40" font-family="'Times New Roman', Georgia, serif" font-size="34" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">LENNOX</text>
           </svg>
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#C8102E]">Energence Rooftops</span>
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#C8102E]">Lennox</span>
         </div>
 
-        <!-- 5. Bryant Official Logo -->
-        <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group col-span-2 sm:col-span-1">
-          <svg viewBox="0 0 240 65" class="h-9 w-auto max-w-[135px] group-hover:scale-105 transition duration-300">
-            <polygon points="16,56 235,56 222,9 3,9" fill="#CC0000"/>
-            <text x="119" y="45" font-family="'Arial Black', Impact, sans-serif" font-size="36" font-style="italic" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">bryant</text>
+        <!-- 6. Bryant (Ad Kit Logo) -->
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
+          <svg viewBox="0 0 250 80" class="h-10 w-auto max-w-[125px] group-hover:scale-105 transition duration-300">
+            <rect x="5" y="4" width="240" height="52" rx="26" fill="#D3122A" />
+            <g fill="#ffffff">
+              <path d="M42 18 h8 v9 c3-6 8-8 13-8 11 0 17 8 17 18 0 11-7 19-17 19-5 0-10-2-13-7 v6 h-8 Z m17 16 c-6 0-9 4-9 11 0 6 3 11 9 11 5 0 9-5 9-11 0-6-4-11-9-11 Z"/>
+              <path d="M84 29 h8 v4 c3-3 6-5 11-5 2 0 4 0 5 1 v9 c-2-1-4-1-6-1-6 0-10 4-10 12 v16 h-8 Z"/>
+              <path d="M110 29 h9 l6 18 6-18 h9 l-12 29 c-3 6-6 9-12 9 -2 0-4 0-5-1 v-7 c2 1 3 1 4 1 3 0 5-2 6-5 l1-3 Z"/>
+              <path d="M144 42 c0-8 5-13 14-13 9 0 14 4 14 12 v15 c0 4 0 7 1 9 h-8 c0-2-1-4-1-5 -3 4-6 6-11 6 -7 0-12-4-12-11 0-7 5-11 13-12 l9-1 v-2 c0-4-2-5-7-5 -4 0-6 2-7 4 Z m15 8 l-7 1 c-4 1-6 3-6 6 0 4 3 5 6 5 5 0 7-3 7-6 Z"/>
+              <path d="M177 29 h8 v4 c3-3 7-5 12-5 8 0 13 5 13 14 v24 h-8 v-22 c0-5-3-8-8-8 -5 0-8 4-8 9 v21 h-8 Z"/>
+              <path d="M216 21 h8 v8 h7 v7 h-7 v15 c0 4 2 5 5 5 1 0 2 0 3 0 v7 c-2 1-5 1-6 1 -7 0-10-4-10-11 v-18 h-5 v-7 h5 Z"/>
+            </g>
+            <text x="125" y="73" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="800" fill="#D3122A" text-anchor="middle" letter-spacing="1">HEATING &amp; COOLING</text>
           </svg>
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#CC0000]">Heating & Cooling</span>
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#D3122A]">Bryant</span>
         </div>
 
       </div>
@@ -272,7 +290,7 @@
             </div>
             <h3 class="text-xl font-bold text-slate-900 mb-3">BMS & Temperature Controls</h3>
             <p class="text-slate-600 text-sm leading-relaxed mb-6">
-              Centralized Building Management Systems (BMS), Direct Digital Controls (DDC), programmable thermostats, and automated scheduling to maximize energy efficiency and ensure facility comfort.
+              Centralized Building Management Systems (BMS), Johnson Controls Metasys / DDC integrations, and automated scheduling to maximize energy efficiency.
             </p>
           </div>
           <a href="schedule.html" class="text-brand-blue font-bold text-sm hover:text-brand-red inline-flex items-center gap-1.5 transition">
@@ -283,7 +301,7 @@
     </div>
   </section>
 
-  <!-- RECENT PROJECTS / PHOTO GALLERY (MATCHING PREVIEW MOCKUP) -->
+  <!-- RECENT PROJECTS / PHOTO GALLERY -->
   <section id="projects" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -298,7 +316,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Project 1: Packaged RTU Diagnostics & Service (Matches Center of Preview) -->
+        <!-- Project 1: Packaged RTU Diagnostics & Service -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
           <img 
             src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=80" 
@@ -311,7 +329,7 @@
           </div>
         </div>
 
-        <!-- Project 2: High-Tonnage Chiller Plant (Matches Left of Preview) -->
+        <!-- Project 2: High-Tonnage Chiller Plant -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
           <img 
             src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" 
@@ -324,7 +342,7 @@
           </div>
         </div>
 
-        <!-- Project 3: Sheet Metal Ventilation & Air (Matches Ductwork in Preview) -->
+        <!-- Project 3: Sheet Metal Ventilation & Air -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
           <img 
             src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=700&q=80" 
@@ -337,7 +355,7 @@
           </div>
         </div>
 
-        <!-- Project 4: Modular VRF Heat Recovery (Matches Right of Preview) -->
+        <!-- Project 4: Modular VRF Heat Recovery -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
           <img 
             src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=700&q=80" 
