@@ -93,9 +93,17 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="relative bg-brand-navy text-white py-20 lg:py-28 overflow-hidden">
-    <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#004B9B_1px,transparent_1px)] [background-size:20px_20px]"></div>
+  <!-- HERO SECTION WITH BACKGROUND PHOTO -->
+  <section class="relative bg-slate-900 text-white py-24 lg:py-32 overflow-hidden">
+    <!-- Hero Background Image Matching Preview Mockup -->
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1600&q=80" 
+        alt="ESCO Commercial HVAC Technician on Rooftop" 
+        class="w-full h-full object-cover opacity-25"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/60"></div>
+    </div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-3xl">
@@ -145,7 +153,7 @@
     </div>
   </section>
 
-  <!-- TRUSTED COMMERCIAL BRANDS SECTION (GENUINE LOGOS) -->
+  <!-- TRUSTED COMMERCIAL BRANDS SECTION -->
   <section id="brands" class="py-16 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-12">
@@ -162,11 +170,9 @@
         <!-- 1. Carrier Official Logo -->
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
           <svg viewBox="0 0 250 100" class="h-12 w-auto max-w-[130px] group-hover:scale-105 transition duration-300">
-            <!-- Authentic Carrier Double-Ring Blue Ellipse -->
             <ellipse cx="125" cy="50" rx="115" ry="42" fill="#003882"/>
             <ellipse cx="125" cy="50" rx="111" ry="38" fill="none" stroke="#ffffff" stroke-width="2.5"/>
             <ellipse cx="125" cy="50" rx="106" ry="33" fill="none" stroke="#003882" stroke-width="1.5"/>
-            <!-- Real Italic Stylized Carrier Script Wordmark -->
             <text x="125" y="61" font-family="'Times New Roman', Georgia, serif" font-size="37" font-style="italic" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">Carrier</text>
           </svg>
           <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-brand-blue">Commercial RTUs</span>
@@ -175,11 +181,9 @@
         <!-- 2. Trane Official Logo -->
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
           <svg viewBox="0 0 240 60" class="h-9 w-auto max-w-[140px] group-hover:scale-105 transition duration-300">
-            <!-- Trane Red Square Badge with Circle -->
             <rect x="5" y="6" width="48" height="48" rx="4" fill="#ED1C24" />
             <circle cx="29" cy="30" r="16" fill="none" stroke="#ffffff" stroke-width="4.5" />
             <polygon points="25,20 38,30 25,40" fill="#ffffff" />
-            <!-- Official Trane Heavy Geometric Typography -->
             <text x="66" y="44" font-family="'Arial Black', Impact, sans-serif" font-size="38" font-weight="900" fill="#ED1C24" letter-spacing="-1">TRANE</text>
           </svg>
           <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-brand-red">IntelliPak & Chillers</span>
@@ -188,12 +192,9 @@
         <!-- 3. York Official Logo -->
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
           <svg viewBox="0 0 230 60" class="h-9 w-auto max-w-[135px] group-hover:scale-105 transition duration-300">
-            <!-- Official York Blue Snowflake Square Emblem -->
             <rect x="4" y="6" width="48" height="48" rx="5" fill="#003A70" />
-            <!-- Snowflake Icon Inside -->
             <path d="M28 14 L28 46 M16 30 L40 30 M19 21 L37 39 M19 39 L37 21" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
             <circle cx="28" cy="30" r="3.5" fill="#003A70" stroke="#ffffff" stroke-width="2"/>
-            <!-- Official York Bold Heavy Block Caps -->
             <text x="64" y="44" font-family="'Helvetica Neue', Arial, sans-serif" font-size="40" font-weight="900" fill="#003A70" letter-spacing="1">YORK</text>
           </svg>
           <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#003A70]">Industrial Systems</span>
@@ -202,9 +203,7 @@
         <!-- 4. Lennox Official Logo -->
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
           <svg viewBox="0 0 240 60" class="h-9 w-auto max-w-[140px] group-hover:scale-105 transition duration-300">
-            <!-- Official Lennox Red Slanted Parallelogram Badge -->
             <polygon points="12,52 232,52 220,8 0,8" fill="#C8102E"/>
-            <!-- Authentic Lennox Italic Serif Wordmark Inside -->
             <text x="116" y="40" font-family="'Times New Roman', Georgia, serif" font-size="34" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">LENNOX</text>
           </svg>
           <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#C8102E]">Energence Rooftops</span>
@@ -213,9 +212,7 @@
         <!-- 5. Bryant Official Logo -->
         <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group col-span-2 sm:col-span-1">
           <svg viewBox="0 0 240 65" class="h-9 w-auto max-w-[135px] group-hover:scale-105 transition duration-300">
-            <!-- Official Bryant Red Parallelogram Cartouche -->
             <polygon points="16,56 235,56 222,9 3,9" fill="#CC0000"/>
-            <!-- Real Bryant Lowercase Bold Italic Typography -->
             <text x="119" y="45" font-family="'Arial Black', Impact, sans-serif" font-size="36" font-style="italic" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">bryant</text>
           </svg>
           <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#CC0000]">Heating & Cooling</span>
@@ -286,7 +283,7 @@
     </div>
   </section>
 
-  <!-- RECENT PROJECTS / PHOTO GALLERY -->
+  <!-- RECENT PROJECTS / PHOTO GALLERY (MATCHING PREVIEW MOCKUP) -->
   <section id="projects" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -295,62 +292,64 @@
           <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">Recent Commercial Projects</h2>
         </div>
         <p class="text-slate-500 text-sm mt-3 md:mt-0 max-w-md">
-          A glimpse into the heavy mechanical equipment installations, industrial sheet metal ductwork, and modular systems we manage.
+          A glimpse into the heavy mechanical equipment installations, industrial sheet metal ductwork, and rooftop units we manage across the Capital Region.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Project 1 -->
+        
+        <!-- Project 1: Packaged RTU Diagnostics & Service (Matches Center of Preview) -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
           <img 
-            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" 
-            alt="Commercial Rooftop Packaged Units" 
+            src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=80" 
+            alt="ESCO Commercial Rooftop Unit Diagnostics and Service" 
             class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
-            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Installation</span>
-            <h4 class="text-base font-bold text-white leading-snug">Multi-Zone RTU Crane Replacement</h4>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Rooftop Mechanical</span>
+            <h4 class="text-base font-bold text-white leading-snug">Commercial RTU Service & Diagnostics</h4>
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- Project 2: High-Tonnage Chiller Plant (Matches Left of Preview) -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
           <img 
-            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=700&q=80" 
-            alt="Commercial Industrial Chiller Plant" 
+            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" 
+            alt="Commercial Water-Cooled & Air-Cooled Chiller Plant" 
             class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
             <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Central Plant</span>
-            <h4 class="text-base font-bold text-white leading-snug">High-Tonnage Water-Cooled Chiller</h4>
+            <h4 class="text-base font-bold text-white leading-snug">High-Tonnage Chiller Systems</h4>
           </div>
         </div>
 
-        <!-- Project 3 -->
+        <!-- Project 3: Sheet Metal Ventilation & Air (Matches Ductwork in Preview) -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
           <img 
             src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=700&q=80" 
-            alt="Spiral and Rectangular Commercial Ductwork" 
+            alt="Commercial Sheet Metal & Industrial Ductwork Fabrication" 
             class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
-            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Ventilation</span>
-            <h4 class="text-base font-bold text-white leading-snug">Custom Industrial Duct Fabrication</h4>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Air Distribution</span>
+            <h4 class="text-base font-bold text-white leading-snug">Industrial Ductwork & Fabrication</h4>
           </div>
         </div>
 
-        <!-- Project 4 -->
+        <!-- Project 4: Modular VRF Heat Recovery (Matches Right of Preview) -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
           <img 
             src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=700&q=80" 
-            alt="Commercial Condensing and VRF Heat Recovery" 
+            alt="Modular Commercial VRF & Condenser Systems" 
             class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
-            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Efficiency</span>
-            <h4 class="text-base font-bold text-white leading-snug">Modular VRF System & Heat Recovery</h4>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Multi-Zone Systems</span>
+            <h4 class="text-base font-bold text-white leading-snug">VRF Heat Recovery Systems</h4>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -582,7 +581,7 @@
         </div>
       </div>
 
-      <!-- Social Links (Updated LinkedIn) -->
+      <!-- Social Links -->
       <div class="flex items-center gap-3">
         <a 
           href="https://facebook.com/escohvac" 
