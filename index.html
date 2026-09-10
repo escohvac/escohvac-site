@@ -4,6 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ESCO Heating & Cooling Inc. | Commercial & Industrial HVAC Solutions</title>
+
+  <!-- SEO -->
+  <meta name="description" content="ESCO Heating & Cooling Inc. provides commercial and industrial HVAC service across the Capital Region: rooftop units, chillers, BMS/controls, and 24/7 emergency dispatch. Albany, NY." />
+  <link rel="canonical" href="https://escohvac.com/" />
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ESCO Heating & Cooling Inc." />
+  <meta property="og:title" content="ESCO Heating & Cooling Inc. | Commercial & Industrial HVAC Solutions" />
+  <meta property="og:description" content="Commercial and industrial HVAC service across the Capital Region: rooftop units, chillers, BMS/controls, and 24/7 emergency dispatch." />
+  <meta property="og:image" content="https://escohvac.com/large.jpg" />
+  <meta property="og:url" content="https://escohvac.com/" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="large.jpg" type="image/jpeg" />
+
+  <!-- Preconnects for faster CDN + image loads -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome for Icons -->
@@ -24,6 +45,42 @@
       }
     }
   </script>
+
+  <!-- Local business structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "ESCO Heating & Cooling Inc.",
+    "image": "https://escohvac.com/large.jpg",
+    "telephone": "+1-518-482-0375",
+    "email": "info@escohvac.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Burdick Drive",
+      "addressLocality": "Albany",
+      "addressRegion": "NY",
+      "postalCode": "12205",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "16:00"
+      }
+    ],
+    "areaServed": "Capital Region, NY",
+    "url": "https://escohvac.com/",
+    "sameAs": [
+      "https://facebook.com/escohvac",
+      "https://x.com/escohvac",
+      "https://www.linkedin.com/company/esco-heating-cooling",
+      "https://instagram.com/escohvac"
+    ]
+  }
+  </script>
 </head>
 <body class="font-sans text-slate-800 bg-white selection:bg-brand-red selection:text-white">
 
@@ -35,7 +92,7 @@
         <span class="hidden md:inline text-slate-600">|</span>
         <span class="hidden md:inline"><i class="fa-solid fa-certificate text-brand-blue mr-1.5"></i> EPA Certified | Licensed Mechanical Contractors</span>
       </div>
-      
+
       <!-- Top Bar Phone & Quick Socials -->
       <div class="flex items-center gap-4">
         <div class="flex items-center gap-2">
@@ -57,12 +114,14 @@
   <!-- NAVIGATION HEADER WITH LOGO -->
   <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
-      
+
       <!-- ESCO Official Logo -->
       <a href="index.html" class="flex items-center">
-        <img 
-          src="large.jpg" 
-          alt="ESCO Heating & Cooling Inc. Logo" 
+        <img
+          src="large.jpg"
+          alt="ESCO Heating & Cooling Inc. Logo"
+          width="200"
+          height="64"
           class="h-14 sm:h-16 w-auto object-contain"
         />
       </a>
@@ -85,25 +144,58 @@
           <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Call Our Office</span>
           <span class="text-base font-black text-brand-blue hover:text-brand-red transition">(518) 482-0375</span>
         </a>
-        <a href="schedule.html" class="bg-brand-red hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-md shadow transition text-sm flex items-center gap-2">
+        <a href="schedule.html" class="hidden sm:flex bg-brand-red hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-md shadow transition text-sm items-center gap-2">
           <i class="fa-regular fa-calendar-check text-xs"></i>
           <span>Schedule Service</span>
         </a>
+
+        <!-- Mobile menu toggle -->
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-md border border-slate-200 text-slate-700 hover:text-brand-blue hover:border-brand-blue transition"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <i class="fa-solid fa-bars text-lg" id="mobile-menu-icon"></i>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Nav Panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <nav class="flex flex-col px-4 sm:px-6 py-4 gap-1 font-semibold text-slate-700 text-sm">
+        <a href="#brands" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Brands</a>
+        <a href="#services" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Services</a>
+        <a href="#projects" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Recent Projects</a>
+        <a href="#testimonials" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Testimonials</a>
+        <a href="#contact" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Contact</a>
+        <a href="schedule.html" class="py-3 border-b border-slate-100 text-brand-red font-bold flex items-center gap-1.5">
+          <i class="fa-regular fa-calendar-check"></i> Schedule Appointment
+        </a>
+        <a href="tel:5184820375" class="py-3 text-brand-blue font-black flex items-center gap-2">
+          <i class="fa-solid fa-phone"></i> Call (518) 482-0375
+        </a>
+      </nav>
     </div>
   </header>
 
   <!-- HERO SECTION WITH BACKGROUND PHOTO -->
   <section class="relative bg-slate-900 text-white py-24 lg:py-32 overflow-hidden">
     <div class="absolute inset-0">
-      <img 
-        src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1600&q=80" 
-        alt="ESCO Commercial HVAC Technician on Rooftop" 
+      <img
+        src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1600&q=75"
+        alt=""
+        aria-hidden="true"
+        width="1600"
+        height="900"
+        fetchpriority="high"
         class="w-full h-full object-cover opacity-25"
       />
       <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/60"></div>
     </div>
-    
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-slate-200 text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-sm">
@@ -152,90 +244,36 @@
     </div>
   </section>
 
-  <!-- TRUSTED COMMERCIAL BRANDS SECTION -->
+  <!-- BRANDS WE SERVICE (self-hosted official logos) -->
   <section id="brands" class="py-16 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-black uppercase tracking-widest text-brand-red">Industry Partnerships</span>
-        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Authorized Commercial Brands We Install & Service</h2>
+        <span class="text-xs font-black uppercase tracking-widest text-brand-red">Equipment Experience</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Commercial Brands We Install & Service</h2>
         <p class="text-slate-500 text-xs sm:text-sm mt-2">
-          Factory-trained diagnostics, certified warranty replacements, BMS integrations, and OEM parts for premier manufacturers.
+          Our technicians diagnose, repair, and maintain equipment from these commercial manufacturers. All brand names and logos are trademarks of their respective owners.
         </p>
       </div>
 
-      <!-- 6-Brand Responsive Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 items-center">
-        
-        <!-- 1. Carrier -->
-        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
-          <img 
-            src="https://brandportal.carrier.com/m/99b434eac013f6f/webimage-carrier_logo_rgb.png" 
-            alt="Carrier Commercial HVAC" 
-            class="h-10 w-auto max-w-[115px] object-contain group-hover:scale-105 transition duration-300"
-            onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/b/b3/Carrier_Logo.svg';"
-          />
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-brand-blue">Carrier</span>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex items-center justify-center h-24">
+          <img src="assets/logos/carrier.png" alt="Carrier" width="120" height="48" loading="lazy" class="max-h-10 w-auto max-w-[110px] object-contain" />
         </div>
-
-        <!-- 2. Trane -->
-        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
-          <svg viewBox="0 0 240 60" class="h-8 w-auto max-w-[125px] group-hover:scale-105 transition duration-300">
-            <rect x="5" y="6" width="48" height="48" rx="4" fill="#ED1C24" />
-            <circle cx="29" cy="30" r="16" fill="none" stroke="#ffffff" stroke-width="4.5" />
-            <polygon points="25,20 38,30 25,40" fill="#ffffff" />
-            <text x="66" y="44" font-family="'Arial Black', Impact, sans-serif" font-size="38" font-weight="900" fill="#ED1C24" letter-spacing="-1">TRANE</text>
-          </svg>
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-brand-red">Trane</span>
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex items-center justify-center h-24">
+          <img src="assets/logos/trane.svg" alt="Trane" width="120" height="48" loading="lazy" class="max-h-8 w-auto max-w-[110px] object-contain" />
         </div>
-
-        <!-- 3. York -->
-        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
-          <img 
-            src="https://www.york.com/-/media/project/jci-global/york-sites/united-states-york/brand-logos/york_full_color_logo.png?la=en&h=95&w=391&hash=DAD2B59C598AE134604DB7DC9FF5DED0" 
-            alt="York Commercial HVAC" 
-            class="h-10 w-auto max-w-[120px] object-contain group-hover:scale-105 transition duration-300"
-            onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/e/eb/York_International_logo.svg';"
-          />
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#003A70]">York</span>
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex items-center justify-center h-24">
+          <img src="assets/logos/york.png" alt="York" width="120" height="48" loading="lazy" class="max-h-9 w-auto max-w-[110px] object-contain" />
         </div>
-
-        <!-- 4. Johnson Controls -->
-        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
-          <img 
-            src="https://1000logos.net/wp-content/uploads/2022/06/Johnson-Controls-logo.png" 
-            alt="Johnson Controls Building Solutions" 
-            class="h-10 w-auto max-w-[125px] object-contain group-hover:scale-105 transition duration-300"
-            onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/0/07/Johnson_Controls_logo.svg';"
-          />
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-brand-blue">Johnson Controls</span>
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex items-center justify-center h-24">
+          <img src="assets/logos/johnson-controls.svg" alt="Johnson Controls" width="120" height="48" loading="lazy" class="max-h-8 w-auto max-w-[110px] object-contain" />
         </div>
-
-        <!-- 5. Lennox -->
-        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
-          <svg viewBox="0 0 240 60" class="h-8 w-auto max-w-[125px] group-hover:scale-105 transition duration-300">
-            <polygon points="12,52 232,52 220,8 0,8" fill="#C8102E"/>
-            <text x="116" y="40" font-family="'Times New Roman', Georgia, serif" font-size="34" font-weight="900" font-style="italic" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">LENNOX</text>
-          </svg>
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#C8102E]">Lennox</span>
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex items-center justify-center h-24">
+          <img src="assets/logos/lennox.svg" alt="Lennox" width="120" height="48" loading="lazy" class="max-h-8 w-auto max-w-[110px] object-contain" />
         </div>
-
-        <!-- 6. Bryant (Ad Kit Logo) -->
-        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex flex-col items-center justify-center h-32 group">
-          <svg viewBox="0 0 250 80" class="h-10 w-auto max-w-[125px] group-hover:scale-105 transition duration-300">
-            <rect x="5" y="4" width="240" height="52" rx="26" fill="#D3122A" />
-            <g fill="#ffffff">
-              <path d="M42 18 h8 v9 c3-6 8-8 13-8 11 0 17 8 17 18 0 11-7 19-17 19-5 0-10-2-13-7 v6 h-8 Z m17 16 c-6 0-9 4-9 11 0 6 3 11 9 11 5 0 9-5 9-11 0-6-4-11-9-11 Z"/>
-              <path d="M84 29 h8 v4 c3-3 6-5 11-5 2 0 4 0 5 1 v9 c-2-1-4-1-6-1-6 0-10 4-10 12 v16 h-8 Z"/>
-              <path d="M110 29 h9 l6 18 6-18 h9 l-12 29 c-3 6-6 9-12 9 -2 0-4 0-5-1 v-7 c2 1 3 1 4 1 3 0 5-2 6-5 l1-3 Z"/>
-              <path d="M144 42 c0-8 5-13 14-13 9 0 14 4 14 12 v15 c0 4 0 7 1 9 h-8 c0-2-1-4-1-5 -3 4-6 6-11 6 -7 0-12-4-12-11 0-7 5-11 13-12 l9-1 v-2 c0-4-2-5-7-5 -4 0-6 2-7 4 Z m15 8 l-7 1 c-4 1-6 3-6 6 0 4 3 5 6 5 5 0 7-3 7-6 Z"/>
-              <path d="M177 29 h8 v4 c3-3 7-5 12-5 8 0 13 5 13 14 v24 h-8 v-22 c0-5-3-8-8-8 -5 0-8 4-8 9 v21 h-8 Z"/>
-              <path d="M216 21 h8 v8 h7 v7 h-7 v15 c0 4 2 5 5 5 1 0 2 0 3 0 v7 c-2 1-5 1-6 1 -7 0-10-4-10-11 v-18 h-5 v-7 h5 Z"/>
-            </g>
-            <text x="125" y="73" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="800" fill="#D3122A" text-anchor="middle" letter-spacing="1">HEATING &amp; COOLING</text>
-          </svg>
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-2 group-hover:text-[#D3122A]">Bryant</span>
+        <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-sm hover:shadow-md hover:border-slate-300 transition flex items-center justify-center h-24">
+          <img src="assets/logos/bryant.svg" alt="Bryant" width="120" height="48" loading="lazy" class="max-h-9 w-auto max-w-[110px] object-contain" />
         </div>
-
       </div>
     </div>
   </section>
@@ -315,12 +353,15 @@
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
+
         <!-- Project 1: Packaged RTU Diagnostics & Service -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
-          <img 
-            src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=80" 
-            alt="ESCO Commercial Rooftop Unit Diagnostics and Service" 
+          <img
+            src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=75"
+            alt="ESCO Commercial Rooftop Unit Diagnostics and Service"
+            width="700"
+            height="640"
+            loading="lazy"
             class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
@@ -331,9 +372,12 @@
 
         <!-- Project 2: High-Tonnage Chiller Plant -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
-          <img 
-            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" 
-            alt="Commercial Water-Cooled & Air-Cooled Chiller Plant" 
+          <img
+            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=75"
+            alt="Commercial Water-Cooled & Air-Cooled Chiller Plant"
+            width="700"
+            height="640"
+            loading="lazy"
             class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
@@ -344,9 +388,12 @@
 
         <!-- Project 3: Sheet Metal Ventilation & Air -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
-          <img 
-            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=700&q=80" 
-            alt="Commercial Sheet Metal & Industrial Ductwork Fabrication" 
+          <img
+            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=700&q=75"
+            alt="Commercial Sheet Metal & Industrial Ductwork Fabrication"
+            width="700"
+            height="640"
+            loading="lazy"
             class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
@@ -357,9 +404,12 @@
 
         <!-- Project 4: Modular VRF Heat Recovery -->
         <div class="group relative overflow-hidden rounded-xl bg-slate-900 shadow-md">
-          <img 
-            src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=700&q=80" 
-            alt="Modular Commercial VRF & Condenser Systems" 
+          <img
+            src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=700&q=75"
+            alt="Modular Commercial VRF & Condenser Systems"
+            width="700"
+            height="640"
+            loading="lazy"
             class="h-64 w-full object-cover group-hover:scale-105 transition duration-300 opacity-90"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex flex-col justify-end p-5">
@@ -385,11 +435,11 @@
         <!-- Testimonial 1 -->
         <div class="bg-white p-7 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
           <div class="space-y-4">
-            <div class="text-amber-400 text-sm">
+            <div class="text-amber-400 text-sm" aria-label="5 out of 5 stars">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="text-slate-600 text-sm leading-relaxed italic">
-              "When our building’s RTU failed in mid-summer heat, ESCO had a crane on site and a replacement operational faster than any other contractor quoted. Exceptional commercial team."
+              "When our building's RTU failed in mid-summer heat, ESCO had a crane on site and a replacement operational faster than any other contractor quoted. Exceptional commercial team."
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-100">
@@ -401,7 +451,7 @@
         <!-- Testimonial 2 -->
         <div class="bg-white p-7 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
           <div class="space-y-4">
-            <div class="text-amber-400 text-sm">
+            <div class="text-amber-400 text-sm" aria-label="5 out of 5 stars">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="text-slate-600 text-sm leading-relaxed italic">
@@ -417,7 +467,7 @@
         <!-- Testimonial 3 -->
         <div class="bg-white p-7 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
           <div class="space-y-4">
-            <div class="text-amber-400 text-sm">
+            <div class="text-amber-400 text-sm" aria-label="5 out of 5 stars">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="text-slate-600 text-sm leading-relaxed italic">
@@ -436,7 +486,7 @@
   <!-- CONTACT & ESTIMATE FORM SECTION -->
   <section id="contact" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       <!-- Urgent Triage Banner -->
       <div class="mb-12 p-5 rounded-2xl bg-amber-50 border-l-4 border-brand-red flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
         <div class="flex items-center gap-3">
@@ -454,7 +504,7 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        
+
         <!-- Contact Information with Address & Hours -->
         <div class="lg:col-span-5">
           <span class="text-xs font-black uppercase tracking-widest text-brand-red">Direct Contact</span>
@@ -464,7 +514,7 @@
           </p>
 
           <div class="space-y-4 text-sm text-slate-700">
-            
+
             <!-- Address -->
             <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-lightGray border border-slate-200">
               <div class="w-10 h-10 rounded-lg bg-brand-blue text-white flex items-center justify-center shrink-0">
@@ -529,36 +579,38 @@
         <!-- Form: Sends directly to info@escohvac.com -->
         <div class="lg:col-span-7 bg-brand-lightGray p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm">
           <form action="https://formsubmit.co/info@escohvac.com" method="POST" class="space-y-4">
-            
+
             <input type="hidden" name="_subject" value="New Website Inquiry - ESCO Heating & Cooling">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_captcha" value="true">
+            <!-- Honeypot: hidden from real users, catches basic bots. FormSubmit drops submissions where this is filled in. -->
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Your Name *</label>
-                <input type="text" name="name" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="John Doe" />
+                <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Your Name *</label>
+                <input id="name" type="text" name="name" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="John Doe" />
               </div>
               <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Company / Facility *</label>
-                <input type="text" name="company" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Acme Logistics LLC" />
+                <label for="company" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Company / Facility *</label>
+                <input id="company" type="text" name="company" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Acme Logistics LLC" />
               </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Work Email *</label>
-                <input type="email" name="email" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="jdoe@company.com" />
+                <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Work Email *</label>
+                <input id="email" type="email" name="email" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="jdoe@company.com" />
               </div>
               <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Phone Number *</label>
-                <input type="tel" name="phone" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="(518) 000-0000" />
+                <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Phone Number *</label>
+                <input id="phone" type="tel" name="phone" required class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="(518) 000-0000" />
               </div>
             </div>
 
             <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Type of Commercial Service</label>
-              <select name="service_type" class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none">
+              <label for="service_type" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Type of Commercial Service</label>
+              <select id="service_type" name="service_type" class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none">
                 <option>Commercial Repair / Diagnostics</option>
                 <option>Preventive Maintenance Contract</option>
                 <option>Rooftop Unit (RTU) Replacement</option>
@@ -569,8 +621,8 @@
             </div>
 
             <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Project Scope or Equipment Notes</label>
-              <textarea name="message" rows="4" class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Provide equipment models, problem symptoms, or bid deadlines..."></textarea>
+              <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Project Scope or Equipment Notes</label>
+              <textarea id="message" name="message" rows="4" class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Provide equipment models, problem symptoms, or bid deadlines..."></textarea>
             </div>
 
             <button type="submit" class="w-full bg-brand-red hover:bg-red-700 text-white font-black py-4 rounded-lg shadow-md transition text-base uppercase tracking-wider">
@@ -586,11 +638,11 @@
   <!-- FOOTER WITH SOCIAL LINKS -->
   <footer class="bg-brand-navy text-slate-400 py-12 border-t border-slate-800 text-xs sm:text-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-      
+
       <!-- Brand & Address -->
       <div class="flex flex-col sm:flex-row items-center gap-4">
         <div class="bg-white px-3 py-1.5 rounded-lg shadow-sm">
-          <img src="large.jpg" alt="ESCO Heating & Cooling" class="h-8 w-auto object-contain" />
+          <img src="large.jpg" alt="ESCO Heating & Cooling" width="120" height="32" loading="lazy" class="h-8 w-auto object-contain" />
         </div>
         <div>
           <span class="text-white font-bold block sm:inline">ESCO Heating & Cooling Inc.</span>
@@ -601,37 +653,37 @@
 
       <!-- Social Links -->
       <div class="flex items-center gap-3">
-        <a 
-          href="https://facebook.com/escohvac" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://facebook.com/escohvac"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Facebook"
           class="w-9 h-9 rounded-full bg-slate-800 hover:bg-[#1877F2] text-slate-300 hover:text-white flex items-center justify-center transition"
         >
           <i class="fa-brands fa-facebook-f text-sm"></i>
         </a>
-        <a 
-          href="https://x.com/escohvac" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://x.com/escohvac"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="X (formerly Twitter)"
           class="w-9 h-9 rounded-full bg-slate-800 hover:bg-black text-slate-300 hover:text-white flex items-center justify-center transition"
         >
           <i class="fa-brands fa-x-twitter text-sm"></i>
         </a>
-        <a 
-          href="https://www.linkedin.com/company/esco-heating-cooling" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://www.linkedin.com/company/esco-heating-cooling"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="LinkedIn"
           class="w-9 h-9 rounded-full bg-slate-800 hover:bg-[#0A66C2] text-slate-300 hover:text-white flex items-center justify-center transition"
         >
           <i class="fa-brands fa-linkedin-in text-sm"></i>
         </a>
-        <a 
-          href="https://instagram.com/escohvac" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://instagram.com/escohvac"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Instagram"
           class="w-9 h-9 rounded-full bg-slate-800 hover:bg-[#E4405F] text-slate-300 hover:text-white flex items-center justify-center transition"
         >
@@ -645,6 +697,37 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var icon = document.getElementById('mobile-menu-icon');
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+
+      btn.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          menu.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        }
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+  </script>
 
 </body>
 </html>

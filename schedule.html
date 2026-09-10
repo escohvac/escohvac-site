@@ -4,6 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Schedule Service & Appointments | ESCO Heating & Cooling Inc.</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Book commercial HVAC service online with ESCO Heating & Cooling: repair diagnostics, preventive maintenance, RTU replacement estimates, and chiller/BMS inspections. Albany, NY." />
+  <link rel="canonical" href="https://escohvac.com/schedule.html" />
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ESCO Heating & Cooling Inc." />
+  <meta property="og:title" content="Schedule Service & Appointments | ESCO Heating & Cooling Inc." />
+  <meta property="og:description" content="Book commercial HVAC service online: repair diagnostics, preventive maintenance, RTU replacement estimates, and chiller/BMS inspections." />
+  <meta property="og:image" content="https://escohvac.com/large.jpg" />
+  <meta property="og:url" content="https://escohvac.com/schedule.html" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="large.jpg" type="image/jpeg" />
+
+  <!-- Preconnects for faster CDN loads -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script>
@@ -46,7 +66,7 @@
   <header class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
       <a href="index.html" class="flex items-center">
-        <img src="large.jpg" alt="ESCO Heating & Cooling" class="h-14 sm:h-16 w-auto object-contain" />
+        <img src="large.jpg" alt="ESCO Heating & Cooling" width="200" height="64" class="h-14 sm:h-16 w-auto object-contain" />
       </a>
       <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-700 text-sm">
         <a href="index.html" class="hover:text-brand-blue transition">Home</a>
@@ -55,11 +75,36 @@
         <a href="index.html#contact" class="hover:text-brand-blue transition">Contact</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a href="tel:5184820375" class="bg-brand-red hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-md shadow transition text-sm flex items-center gap-2">
+        <a href="tel:5184820375" class="hidden sm:flex bg-brand-red hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-md shadow transition text-sm items-center gap-2">
           <i class="fa-solid fa-phone text-xs"></i>
           <span>(518) 482-0375</span>
         </a>
+
+        <!-- Mobile menu toggle -->
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-md border border-slate-200 text-slate-700 hover:text-brand-blue hover:border-brand-blue transition"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <i class="fa-solid fa-bars text-lg" id="mobile-menu-icon"></i>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Nav Panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <nav class="flex flex-col px-4 sm:px-6 py-4 gap-1 font-semibold text-slate-700 text-sm">
+        <a href="index.html" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Home</a>
+        <a href="index.html#services" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Services</a>
+        <a href="index.html#projects" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Recent Projects</a>
+        <a href="index.html#contact" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Contact</a>
+        <a href="tel:5184820375" class="py-3 text-brand-blue font-black flex items-center gap-2">
+          <i class="fa-solid fa-phone"></i> Call (518) 482-0375
+        </a>
+      </nav>
     </div>
   </header>
 
@@ -98,7 +143,9 @@
         <!-- FormSubmit Options -->
         <input type="hidden" name="_subject" value="New Service Appointment Request - ESCO HVAC">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_captcha" value="true">
+        <!-- Honeypot: hidden from real users, catches basic bots. FormSubmit drops submissions where this is filled in. -->
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
         <!-- 1. Contact & Facility Details -->
         <div>
@@ -107,24 +154,24 @@
           </h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Contact Name *</label>
-              <input type="text" name="contact_name" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Jane Smith" />
+              <label for="contact_name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Contact Name *</label>
+              <input id="contact_name" type="text" name="contact_name" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Jane Smith" />
             </div>
             <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Company / Facility Name *</label>
-              <input type="text" name="company_name" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Albany Distribution Center" />
+              <label for="company_name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Company / Facility Name *</label>
+              <input id="company_name" type="text" name="company_name" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Albany Distribution Center" />
             </div>
             <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Work Email *</label>
-              <input type="email" name="email" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="jsmith@company.com" />
+              <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Work Email *</label>
+              <input id="email" type="email" name="email" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="jsmith@company.com" />
             </div>
             <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Phone Number *</label>
-              <input type="tel" name="phone" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="(518) 000-0000" />
+              <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Phone Number *</label>
+              <input id="phone" type="tel" name="phone" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="(518) 000-0000" />
             </div>
             <div class="sm:col-span-2">
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Facility Address *</label>
-              <input type="text" name="facility_address" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Street Address, City, State, ZIP" />
+              <label for="facility_address" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Facility Address *</label>
+              <input id="facility_address" type="text" name="facility_address" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Street Address, City, State, ZIP" />
             </div>
           </div>
         </div>
@@ -136,13 +183,13 @@
           </h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Preferred Date *</label>
-              <input type="date" name="preferred_date" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" />
+              <label for="preferred_date" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Preferred Date *</label>
+              <input id="preferred_date" type="date" name="preferred_date" required class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" />
               <span class="text-[11px] text-slate-500 mt-1 block">Standard service appointments run Monday – Friday</span>
             </div>
             <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Preferred Time Window *</label>
-              <select name="preferred_time_window" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none">
+              <label for="preferred_time_window" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Preferred Time Window *</label>
+              <select id="preferred_time_window" name="preferred_time_window" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none">
                 <option>Morning (8:00 AM – 12:00 PM)</option>
                 <option>Afternoon (12:00 PM – 4:00 PM)</option>
                 <option>First Available Slot</option>
@@ -158,8 +205,8 @@
           </h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Request Type</label>
-              <select name="service_request_type" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none">
+              <label for="service_request_type" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Request Type</label>
+              <select id="service_request_type" name="service_request_type" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none">
                 <option>HVAC Repair & Diagnostics</option>
                 <option>Scheduled Preventive Maintenance / Filter Service</option>
                 <option>Rooftop Unit (RTU) Replacement Estimate</option>
@@ -169,8 +216,8 @@
               </select>
             </div>
             <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Approximate Equipment Age (Optional)</label>
-              <select name="equipment_age" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none">
+              <label for="equipment_age" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Approximate Equipment Age (Optional)</label>
+              <select id="equipment_age" name="equipment_age" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none">
                 <option>Less than 5 Years</option>
                 <option>5 to 10 Years</option>
                 <option>10 to 15 Years</option>
@@ -181,8 +228,8 @@
           </div>
 
           <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Nature of Problem / Equipment Notes</label>
-            <textarea name="problem_description" rows="4" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Provide equipment model numbers, error codes, rooftop roof hatch access details, or symptoms..."></textarea>
+            <label for="problem_description" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Nature of Problem / Equipment Notes</label>
+            <textarea id="problem_description" name="problem_description" rows="4" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Provide equipment model numbers, error codes, rooftop roof hatch access details, or symptoms..."></textarea>
           </div>
         </div>
 
@@ -198,7 +245,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
       <div class="flex items-center gap-4">
         <div class="bg-white px-3 py-1.5 rounded-lg shadow-sm">
-          <img src="large.jpg" alt="ESCO Heating & Cooling" class="h-8 w-auto object-contain" />
+          <img src="large.jpg" alt="ESCO Heating & Cooling" width="120" height="32" loading="lazy" class="h-8 w-auto object-contain" />
         </div>
         <div>
           <span class="text-white font-bold block sm:inline">ESCO Heating & Cooling Inc.</span>
@@ -211,6 +258,37 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var icon = document.getElementById('mobile-menu-icon');
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+
+      btn.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          menu.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        }
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+  </script>
 
 </body>
 </html>
