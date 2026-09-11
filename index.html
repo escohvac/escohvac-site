@@ -197,19 +197,15 @@
     </div>
   </header>
 
-  <!-- HERO SECTION WITH BACKGROUND PHOTO -->
+  <!-- HERO SECTION WITH IMAGE SLIDER -->
   <section class="relative bg-slate-900 text-white py-24 lg:py-32 overflow-hidden">
-    <div class="absolute inset-0">
-      <img
-        src="assets/photos/hero-rooftop.jpg"
-        alt=""
-        aria-hidden="true"
-        width="1600"
-        height="1068"
-        fetchpriority="high"
-        class="w-full h-full object-cover opacity-25"
-      />
-      <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/60"></div>
+    <div class="absolute inset-0" aria-hidden="true">
+      <img src="assets/photos/hero-rooftop.jpg" alt="" width="1600" height="2400" fetchpriority="high" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-100" data-slide="0" />
+      <img src="assets/photos/hero-rtu-technician.jpg" alt="" width="1600" height="1067" loading="lazy" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0" data-slide="1" />
+      <img src="assets/photos/hero-chiller-rtu.jpg" alt="" width="1600" height="1067" loading="lazy" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0" data-slide="2" />
+      <img src="assets/photos/hero-crane-lift.jpg" alt="" width="1600" height="1067" loading="lazy" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0" data-slide="3" />
+      <img src="assets/photos/hero-cooling-tower.jpg" alt="" width="1600" height="1067" loading="lazy" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out opacity-0" data-slide="4" />
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/60 to-brand-navy/25"></div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -233,6 +229,15 @@
           </a>
         </div>
       </div>
+    </div>
+
+    <!-- Slide indicators -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2.5">
+      <button type="button" class="hero-dot w-2.5 h-2.5 rounded-full bg-brand-red transition" data-goto="0" aria-label="Show slide 1"></button>
+      <button type="button" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition" data-goto="1" aria-label="Show slide 2"></button>
+      <button type="button" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition" data-goto="2" aria-label="Show slide 3"></button>
+      <button type="button" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition" data-goto="3" aria-label="Show slide 4"></button>
+      <button type="button" class="hero-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition" data-goto="4" aria-label="Show slide 5"></button>
     </div>
   </section>
 
@@ -830,6 +835,54 @@
       menu.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', closeMenu);
       });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var slides = document.querySelectorAll('.hero-slide');
+      var dots = document.querySelectorAll('.hero-dot');
+      if (!slides.length) return;
+
+      var current = 0;
+      var intervalMs = 6000;
+      var timer;
+
+      function showSlide(index) {
+        slides.forEach(function (slide, i) {
+          slide.classList.toggle('opacity-100', i === index);
+          slide.classList.toggle('opacity-0', i !== index);
+        });
+        dots.forEach(function (dot, i) {
+          dot.classList.toggle('bg-brand-red', i === index);
+          dot.classList.toggle('bg-white/40', i !== index);
+        });
+        current = index;
+      }
+
+      function next() {
+        showSlide((current + 1) % slides.length);
+      }
+
+      function start() {
+        stop();
+        timer = setInterval(next, intervalMs);
+      }
+
+      function stop() {
+        if (timer) clearInterval(timer);
+      }
+
+      dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          showSlide(parseInt(dot.dataset.goto, 10));
+          start();
+        });
+      });
+
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        start();
+      }
     })();
   </script>
 
