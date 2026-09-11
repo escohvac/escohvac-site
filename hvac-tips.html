@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HVAC Tips | ESCO Heating & Cooling Inc.</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Practical commercial HVAC tips from ESCO Heating & Cooling: preventive maintenance, RTU replacement signs, refrigerant leaks, BMS, heat pumps, and winter prep for Capital Region facilities." />
+  <link rel="canonical" href="https://escohvac.com/hvac-tips.html" />
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ESCO Heating & Cooling Inc." />
+  <meta property="og:title" content="HVAC Tips | ESCO Heating & Cooling Inc." />
+  <meta property="og:description" content="Practical commercial HVAC tips: preventive maintenance, RTU replacement signs, refrigerant leaks, BMS, heat pumps, and winter prep for Capital Region facilities." />
+  <meta property="og:image" content="https://escohvac.com/large.jpg" />
+  <meta property="og:url" content="https://escohvac.com/hvac-tips.html" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="large.jpg" type="image/jpeg" />
+
+  <!-- Preconnects for faster CDN loads -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#004B9B',
+              navy: '#0A1E3F',
+              red: '#E31B23',
+              lightGray: '#F4F6F9'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-slate-800 bg-white selection:bg-brand-red selection:text-white">
+
+  <!-- TOP DISPATCH BAR -->
+  <div class="bg-brand-navy text-white text-xs md:text-sm py-2.5 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4 text-slate-300">
+        <span><i class="fa-solid fa-location-dot text-brand-red mr-1.5"></i> 12 Burdick Dr, Albany, NY 12205</span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="hidden md:inline">Commercial Dispatch Hours: Mon–Fri 8:00 AM – 4:00 PM</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-brand-red uppercase tracking-wider text-xs">Immediate Dispatch:</span>
+        <a href="tel:5184820375" class="font-black text-white hover:text-brand-red tracking-wider text-sm transition">
+          (518) 482-0375
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
+      <a href="index.html" class="flex items-center">
+        <img src="large.jpg" alt="ESCO Heating & Cooling" width="200" height="64" class="h-14 sm:h-16 w-auto object-contain" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-700 text-sm">
+        <a href="index.html" class="hover:text-brand-blue transition">Home</a>
+        <a href="index.html#services" class="hover:text-brand-blue transition">Services</a>
+        <a href="index.html#projects" class="hover:text-brand-blue transition">Recent Projects</a>
+        <a href="service-area.html" class="hover:text-brand-blue transition">Service Area</a>
+        <a href="hvac-tips.html" class="text-brand-blue transition font-bold">HVAC Tips</a>
+        <a href="index.html#contact" class="hover:text-brand-blue transition">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="tel:5184820375" class="hidden sm:flex bg-brand-red hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-md shadow transition text-sm items-center gap-2">
+          <i class="fa-solid fa-phone text-xs"></i>
+          <span>(518) 482-0375</span>
+        </a>
+
+        <!-- Mobile menu toggle -->
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-md border border-slate-200 text-slate-700 hover:text-brand-blue hover:border-brand-blue transition"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <i class="fa-solid fa-bars text-lg" id="mobile-menu-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <nav class="flex flex-col px-4 sm:px-6 py-4 gap-1 font-semibold text-slate-700 text-sm">
+        <a href="index.html" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Home</a>
+        <a href="index.html#services" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Services</a>
+        <a href="index.html#projects" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Recent Projects</a>
+        <a href="service-area.html" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Service Area</a>
+        <a href="hvac-tips.html" class="py-3 border-b border-slate-100 text-brand-blue font-bold">HVAC Tips</a>
+        <a href="index.html#contact" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Contact</a>
+        <a href="tel:5184820375" class="py-3 text-brand-blue font-black flex items-center gap-2">
+          <i class="fa-solid fa-phone"></i> Call (518) 482-0375
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="relative bg-brand-navy text-white py-16 sm:py-20 overflow-hidden">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="text-xs font-black uppercase tracking-widest text-brand-red">Facility Manager Resources</span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mt-2 mb-4">
+        Commercial HVAC Tips
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Practical guidance for facility managers and property owners on keeping commercial HVAC systems running efficiently — written by ESCO's mechanical technicians.
+      </p>
+    </div>
+  </section>
+
+  <!-- TIPS GRID -->
+  <section class="py-16 sm:py-20 bg-brand-lightGray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        <!-- Tip 1 -->
+        <div class="bg-white p-7 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900 mb-2">How Often Should Commercial RTUs Be Serviced?</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Most rooftop units need two full inspections a year — once in spring before cooling season and once in fall before heating season — with filter changes every one to three months depending on your building's air quality and occupancy. Facilities near construction sites, industrial areas, or with heavy foot traffic typically need more frequent filter service.
+          </p>
+        </div>
+
+        <!-- Tip 2 -->
+        <div class="bg-white p-7 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900 mb-2">5 Signs Your RTU Needs Replacement, Not Repair</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Watch for equipment over 15 years old, frequent breakdowns, climbing utility bills, dependence on increasingly scarce R-22 refrigerant, and uneven temperatures across zones. As a rule of thumb, if repair costs are approaching half the cost of a new unit, replacement is usually the better long-term investment.
+          </p>
+        </div>
+
+        <!-- Tip 3 -->
+        <div class="bg-white p-7 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-droplet-slash"></i>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900 mb-2">What Causes Refrigerant Leaks — and Why They Matter</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Common causes include vibration fatigue at braze joints, coil corrosion, and physical damage from maintenance work or debris. Beyond reduced efficiency and compressor risk, larger commercial systems fall under EPA Section 608 leak-repair and reporting requirements — another reason to address leaks quickly rather than just topping off refrigerant.
+          </p>
+        </div>
+
+        <!-- Tip 4 -->
+        <div class="bg-white p-7 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-clipboard-check"></i>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900 mb-2">What's Actually Included in a Preventive Maintenance Contract?</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            A solid commercial PM agreement typically covers seasonal inspections, filter changes, coil cleaning, refrigerant level checks, belt and bearing lubrication, and electrical connection tightening — plus priority response if something breaks between visits. The goal is catching small issues while they're still inexpensive to fix.
+          </p>
+        </div>
+
+        <!-- Tip 5 -->
+        <div class="bg-white p-7 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-grip-lines-vertical"></i>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900 mb-2">Why Evaporator Coils Need Regular Cleaning</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            A dirty coil reduces heat transfer, forcing the system to run longer and harder to hit setpoint — which drives up energy costs and accelerates wear on the compressor. Buildup can also lead to icing, restricted airflow, and poor dehumidification, especially during humid summer months.
+          </p>
+        </div>
+
+        <!-- Tip 6 -->
+        <div class="bg-white p-7 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900 mb-2">Why a Building Management System Pays for Itself</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            A BMS or DDC controls platform centralizes scheduling and setpoints across a building — or your whole portfolio — so unoccupied spaces stop being over-conditioned. You also get remote visibility and fault alerts, which often catches equipment problems before staff or tenants ever notice something's wrong.
+          </p>
+        </div>
+
+        <!-- Tip 7 -->
+        <div class="bg-white p-7 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-temperature-half"></i>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900 mb-2">Are Heat Pumps a Fit for Your Commercial Building?</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Heat pumps deliver both heating and cooling from one system, which can mean real efficiency gains for buildings with a meaningful cooling load. In Capital Region winters, that usually means evaluating cold-climate rated equipment or a hybrid setup paired with backup heat — worth a proper load calculation before committing either way.
+          </p>
+        </div>
+
+        <!-- Tip 8 -->
+        <div class="bg-white p-7 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-snowflake"></i>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900 mb-2">Preparing Your Heating System for a Capital Region Winter</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Schedule your boiler or furnace startup inspection before the first hard freeze, not after. Check that economizer dampers aren't stuck in an inefficient position, inspect pipe insulation in unheated mechanical rooms, and walk your emergency heat-loss procedure with staff before you actually need it.
+          </p>
+        </div>
+
+        <!-- Tip 9 -->
+        <div class="bg-white p-7 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900 mb-2">Practical Ways to Lower Commercial HVAC Energy Costs</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            BMS-driven scheduling, economizer tune-ups that maximize free cooling, routine filter and coil service, and sealing duct leaks all reduce operating costs — usually far more cost-effectively than deferring maintenance and running equipment into the ground.
+          </p>
+        </div>
+
+        <!-- Tip 10 -->
+        <div class="bg-white p-7 rounded-xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <h2 class="text-lg font-bold text-slate-900 mb-2">When to Call for Emergency HVAC Service</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Total system failure during extreme temperatures, burning smells, water leaks near electrical panels, or refrigerant odors all warrant an immediate call rather than waiting for the next scheduled visit — especially in facilities with temperature-sensitive operations like server rooms, cold storage, or cleanrooms.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Question callout -->
+      <div class="mt-10 p-5 rounded-2xl bg-white border-l-4 border-brand-red flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm max-w-4xl mx-auto">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-red-100 text-brand-red flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-circle-question"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm">Have a question specific to your equipment?</h4>
+            <p class="text-xs text-slate-600">General tips only go so far — call our dispatch line and talk to a technician about your building.</p>
+          </div>
+        </div>
+        <a href="tel:5184820375" class="whitespace-nowrap px-5 py-2.5 bg-brand-red text-white text-xs font-bold rounded-lg hover:bg-red-700 transition self-stretch sm:self-auto text-center">
+          <i class="fa-solid fa-phone mr-1.5"></i> Call (518) 482-0375
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 rounded-2xl bg-brand-blue text-white p-8 sm:p-10">
+        <div class="text-center md:text-left">
+          <h2 class="text-2xl sm:text-3xl font-black">Ready for a Preventive Maintenance Plan?</h2>
+          <p class="text-blue-100 text-sm mt-2 max-w-xl">
+            Put these tips into practice with a custom SLA-based maintenance agreement from ESCO — scheduled inspections, priority response, and one less thing to worry about.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+          <a href="schedule.html" class="inline-flex items-center justify-center bg-brand-red hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-lg shadow transition text-sm">
+            <i class="fa-regular fa-calendar-check mr-2"></i> Schedule Service
+          </a>
+          <a href="tel:5184820375" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3.5 rounded-lg border border-white/20 transition text-sm">
+            <i class="fa-solid fa-phone mr-2"></i> Call (518) 482-0375
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy text-slate-400 py-10 border-t border-slate-800 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+      <div class="flex items-center gap-4">
+        <div class="bg-white px-3 py-1.5 rounded-lg shadow-sm">
+          <img src="large.jpg" alt="ESCO Heating & Cooling" width="120" height="32" loading="lazy" class="h-8 w-auto object-contain" />
+        </div>
+        <div>
+          <span class="text-white font-bold block sm:inline">ESCO Heating & Cooling Inc.</span>
+          <span class="hidden sm:inline"> | </span>
+          12 Burdick Drive, Albany, NY 12205
+        </div>
+      </div>
+      <div>
+        Commercial Dispatch: <a href="tel:5184820375" class="text-white font-bold hover:underline">(518) 482-0375</a> | <a href="mailto:info@escohvac.com" class="text-white hover:underline">info@escohvac.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var icon = document.getElementById('mobile-menu-icon');
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+
+      btn.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          menu.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        }
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+  </script>
+
+</body>
+</html>
