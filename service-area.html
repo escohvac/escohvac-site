@@ -26,6 +26,8 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -170,15 +172,7 @@
         </p>
       </div>
       <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-        <iframe
-          src="https://www.google.com/maps?q=Capital+Region,+NY&z=9&output=embed"
-          width="100%"
-          height="450"
-          style="border:0"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Map of ESCO Heating & Cooling's Capital Region, NY service area"
-        ></iframe>
+        <div id="service-area-map" style="height: 450px;" role="img" aria-label="Map of ESCO Heating & Cooling's Capital Region, NY service area with a pin for each community served"></div>
       </div>
     </div>
   </section>
@@ -356,6 +350,49 @@
       menu.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', closeMenu);
       });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var cities = [
+        { name: 'Albany', lat: 42.6526, lng: -73.7562 },
+        { name: 'Troy', lat: 42.7284, lng: -73.6918 },
+        { name: 'Schenectady', lat: 42.8142, lng: -73.9396 },
+        { name: 'Saratoga Springs', lat: 43.0831, lng: -73.7846 },
+        { name: 'Queensbury', lat: 43.3567, lng: -73.6801 },
+        { name: 'Clifton Park', lat: 42.8584, lng: -73.7746 },
+        { name: 'Latham', lat: 42.7440, lng: -73.7562 },
+        { name: 'Colonie', lat: 42.7176, lng: -73.8298 },
+        { name: 'Glens Falls', lat: 43.3095, lng: -73.6440 },
+        { name: 'Gloversville', lat: 43.0526, lng: -74.3435 },
+        { name: 'Rensselaer', lat: 42.6503, lng: -73.7290 },
+        { name: 'Hudson', lat: 42.2528, lng: -73.7904 }
+      ];
+
+      var map = L.map('service-area-map', { scrollWheelZoom: false });
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18
+      }).addTo(map);
+
+      var pinIcon = L.divIcon({
+        className: '',
+        html: '<i class="fa-solid fa-location-dot" style="color:#E31B23; font-size: 26px; filter: drop-shadow(0 1px 1px rgba(0,0,0,0.35));"></i>',
+        iconSize: [26, 26],
+        iconAnchor: [13, 26],
+        popupAnchor: [0, -24]
+      });
+
+      var bounds = [];
+      cities.forEach(function (city) {
+        var marker = L.marker([city.lat, city.lng], { icon: pinIcon }).addTo(map);
+        marker.bindPopup('<strong>' + city.name + ', NY</strong>');
+        bounds.push([city.lat, city.lng]);
+      });
+
+      map.fitBounds(bounds, { padding: [30, 30] });
     })();
   </script>
 
