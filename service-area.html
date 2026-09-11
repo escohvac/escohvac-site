@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Area | ESCO Heating & Cooling Inc.</title>
+
+  <!-- SEO -->
+  <meta name="description" content="ESCO Heating & Cooling provides commercial HVAC service throughout New York's Capital Region, including Albany, Troy, Schenectady, Saratoga Springs, Queensbury, and surrounding communities." />
+  <link rel="canonical" href="https://escohvac.com/service-area.html" />
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ESCO Heating & Cooling Inc." />
+  <meta property="og:title" content="Service Area | ESCO Heating & Cooling Inc." />
+  <meta property="og:description" content="Commercial HVAC service throughout New York's Capital Region, including Albany, Troy, Schenectady, Saratoga Springs, Queensbury, and surrounding communities." />
+  <meta property="og:image" content="https://escohvac.com/large.jpg" />
+  <meta property="og:url" content="https://escohvac.com/service-area.html" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="large.jpg" type="image/jpeg" />
+
+  <!-- Preconnects for faster CDN loads -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#004B9B',
+              navy: '#0A1E3F',
+              red: '#E31B23',
+              lightGray: '#F4F6F9'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Local business structured data with area served -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "ESCO Heating & Cooling Inc.",
+    "image": "https://escohvac.com/large.jpg",
+    "telephone": "+1-518-482-0375",
+    "email": "info@escohvac.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Burdick Drive",
+      "addressLocality": "Albany",
+      "addressRegion": "NY",
+      "postalCode": "12205",
+      "addressCountry": "US"
+    },
+    "url": "https://escohvac.com/service-area.html",
+    "areaServed": [
+      { "@type": "City", "name": "Albany, NY" },
+      { "@type": "City", "name": "Troy, NY" },
+      { "@type": "City", "name": "Schenectady, NY" },
+      { "@type": "City", "name": "Saratoga Springs, NY" },
+      { "@type": "City", "name": "Queensbury, NY" },
+      { "@type": "City", "name": "Clifton Park, NY" },
+      { "@type": "City", "name": "Latham, NY" },
+      { "@type": "City", "name": "Colonie, NY" },
+      { "@type": "City", "name": "Glens Falls, NY" },
+      { "@type": "City", "name": "Gloversville, NY" },
+      { "@type": "City", "name": "Rensselaer, NY" },
+      { "@type": "City", "name": "Hudson, NY" }
+    ]
+  }
+  </script>
+</head>
+<body class="font-sans text-slate-800 bg-white selection:bg-brand-red selection:text-white">
+
+  <!-- TOP DISPATCH BAR -->
+  <div class="bg-brand-navy text-white text-xs md:text-sm py-2.5 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4 text-slate-300">
+        <span><i class="fa-solid fa-location-dot text-brand-red mr-1.5"></i> 12 Burdick Dr, Albany, NY 12205</span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="hidden md:inline">Commercial Dispatch Hours: Mon–Fri 8:00 AM – 4:00 PM</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-brand-red uppercase tracking-wider text-xs">Immediate Dispatch:</span>
+        <a href="tel:5184820375" class="font-black text-white hover:text-brand-red tracking-wider text-sm transition">
+          (518) 482-0375
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
+      <a href="index.html" class="flex items-center">
+        <img src="large.jpg" alt="ESCO Heating & Cooling" width="200" height="64" class="h-14 sm:h-16 w-auto object-contain" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-700 text-sm">
+        <a href="index.html" class="hover:text-brand-blue transition">Home</a>
+        <a href="index.html#services" class="hover:text-brand-blue transition">Services</a>
+        <a href="index.html#projects" class="hover:text-brand-blue transition">Recent Projects</a>
+        <a href="service-area.html" class="text-brand-blue transition font-bold">Service Area</a>
+        <a href="index.html#contact" class="hover:text-brand-blue transition">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="tel:5184820375" class="hidden sm:flex bg-brand-red hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-md shadow transition text-sm items-center gap-2">
+          <i class="fa-solid fa-phone text-xs"></i>
+          <span>(518) 482-0375</span>
+        </a>
+
+        <!-- Mobile menu toggle -->
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-md border border-slate-200 text-slate-700 hover:text-brand-blue hover:border-brand-blue transition"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <i class="fa-solid fa-bars text-lg" id="mobile-menu-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Panel -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <nav class="flex flex-col px-4 sm:px-6 py-4 gap-1 font-semibold text-slate-700 text-sm">
+        <a href="index.html" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Home</a>
+        <a href="index.html#services" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Services</a>
+        <a href="index.html#projects" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Recent Projects</a>
+        <a href="service-area.html" class="py-3 border-b border-slate-100 text-brand-blue font-bold">Service Area</a>
+        <a href="index.html#contact" class="py-3 border-b border-slate-100 hover:text-brand-blue transition">Contact</a>
+        <a href="tel:5184820375" class="py-3 text-brand-blue font-black flex items-center gap-2">
+          <i class="fa-solid fa-phone"></i> Call (518) 482-0375
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="relative bg-brand-navy text-white py-16 sm:py-20 overflow-hidden">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="text-xs font-black uppercase tracking-widest text-brand-red">Where We Work</span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mt-2 mb-4">
+        Proudly Serving Albany, NY & the Capital Region
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        From our headquarters in Albany, ESCO's commercial HVAC crews dispatch throughout the Capital Region — covering Troy, Schenectady, Saratoga Springs, and communities well beyond.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA CITY GRID -->
+  <section class="py-16 sm:py-20 bg-brand-lightGray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-black uppercase tracking-widest text-brand-red">Communities We Serve</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Find Your City</h2>
+        <p class="text-slate-500 text-sm mt-2">
+          Select your city to request commercial HVAC service, or call our dispatch line to confirm coverage.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Albany</span>
+        </a>
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Troy</span>
+        </a>
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Schenectady</span>
+        </a>
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Saratoga Springs</span>
+        </a>
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Queensbury</span>
+        </a>
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Clifton Park</span>
+        </a>
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Latham</span>
+        </a>
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Colonie</span>
+        </a>
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Glens Falls</span>
+        </a>
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Gloversville</span>
+        </a>
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Rensselaer</span>
+        </a>
+        <a href="schedule.html" class="group bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-blue transition flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-50 text-brand-blue flex items-center justify-center shrink-0 group-hover:bg-brand-blue group-hover:text-white transition">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <span class="font-bold text-slate-800 text-sm group-hover:text-brand-blue transition">Hudson</span>
+        </a>
+      </div>
+
+      <!-- Don't see your city -->
+      <div class="mt-10 p-5 rounded-2xl bg-white border-l-4 border-brand-red flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm max-w-4xl mx-auto">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-red-100 text-brand-red flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-circle-question"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm">Don't see your city listed?</h4>
+            <p class="text-xs text-slate-600">ESCO may still serve your facility — call our dispatch line with your address and we'll confirm coverage.</p>
+          </div>
+        </div>
+        <a href="tel:5184820375" class="whitespace-nowrap px-5 py-2.5 bg-brand-red text-white text-xs font-bold rounded-lg hover:bg-red-700 transition self-stretch sm:self-auto text-center">
+          <i class="fa-solid fa-phone mr-1.5"></i> Call (518) 482-0375
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 rounded-2xl bg-brand-blue text-white p-8 sm:p-10">
+        <div class="text-center md:text-left">
+          <h2 class="text-2xl sm:text-3xl font-black">Ready to Schedule Service in Your Area?</h2>
+          <p class="text-blue-100 text-sm mt-2 max-w-xl">
+            Book online in minutes, or call our Capital Region dispatch line for emergency and same-week commercial service.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+          <a href="schedule.html" class="inline-flex items-center justify-center bg-brand-red hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-lg shadow transition text-sm">
+            <i class="fa-regular fa-calendar-check mr-2"></i> Schedule Service
+          </a>
+          <a href="tel:5184820375" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3.5 rounded-lg border border-white/20 transition text-sm">
+            <i class="fa-solid fa-phone mr-2"></i> Call (518) 482-0375
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy text-slate-400 py-10 border-t border-slate-800 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+      <div class="flex items-center gap-4">
+        <div class="bg-white px-3 py-1.5 rounded-lg shadow-sm">
+          <img src="large.jpg" alt="ESCO Heating & Cooling" width="120" height="32" loading="lazy" class="h-8 w-auto object-contain" />
+        </div>
+        <div>
+          <span class="text-white font-bold block sm:inline">ESCO Heating & Cooling Inc.</span>
+          <span class="hidden sm:inline"> | </span>
+          12 Burdick Drive, Albany, NY 12205
+        </div>
+      </div>
+      <div>
+        Commercial Dispatch: <a href="tel:5184820375" class="text-white font-bold hover:underline">(518) 482-0375</a> | <a href="mailto:info@escohvac.com" class="text-white hover:underline">info@escohvac.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var icon = document.getElementById('mobile-menu-icon');
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+
+      btn.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          menu.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        }
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+  </script>
+
+</body>
+</html>
