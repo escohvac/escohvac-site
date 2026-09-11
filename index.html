@@ -105,21 +105,12 @@
         <span class="hidden md:inline"><i class="fa-solid fa-certificate text-brand-blue mr-1.5"></i> EPA Certified | Licensed Mechanical Contractors</span>
       </div>
 
-      <!-- Top Bar Phone & Quick Socials -->
-      <div class="flex items-center gap-4">
-        <div class="flex items-center gap-2">
-          <span class="font-bold text-brand-red uppercase tracking-wider text-xs">24/7 Dispatch:</span>
-          <a href="tel:5184820375" class="font-black text-white hover:text-brand-red tracking-wider text-sm transition">
-            (518) 482-0375
-          </a>
-        </div>
-        <div class="hidden md:flex items-center gap-2.5 border-l border-slate-700 pl-3 text-slate-400">
-          <a href="https://facebook.com/escohvac" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" title="Facebook"><i class="fa-brands fa-facebook-f text-xs"></i></a>
-          <a href="https://x.com/escohvac" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" title="X (Twitter)"><i class="fa-brands fa-x-twitter text-xs"></i></a>
-          <a href="https://www.linkedin.com/company/esco-heating-cooling" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" title="LinkedIn"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
-          <a href="https://instagram.com/escohvac" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" title="Instagram"><i class="fa-brands fa-instagram text-xs"></i></a>
-          <a href="https://share.google/X8KdAYklrxNUbORV2" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" title="Google Reviews"><i class="fa-brands fa-google text-xs"></i></a>
-        </div>
+      <!-- Top Bar Phone -->
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-brand-red uppercase tracking-wider text-xs">24/7 Dispatch:</span>
+        <a href="tel:5184820375" class="font-black text-white hover:text-brand-red tracking-wider text-sm transition">
+          (518) 482-0375
+        </a>
       </div>
     </div>
   </div>
@@ -141,25 +132,33 @@
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-700 text-sm">
-        <a href="#brands" class="hover:text-brand-blue transition">Brands</a>
         <a href="#services" class="hover:text-brand-blue transition">Services</a>
         <a href="#projects" class="hover:text-brand-blue transition">Recent Projects</a>
-        <a href="#testimonials" class="hover:text-brand-blue transition">Testimonials</a>
         <a href="service-area.html" class="hover:text-brand-blue transition">Service Area</a>
-        <a href="hvac-tips.html" class="hover:text-brand-blue transition">HVAC Tips</a>
         <a href="#contact" class="hover:text-brand-blue transition">Contact</a>
-        <a href="https://escoinc.easyapply.co" target="_blank" rel="noopener noreferrer" class="hover:text-brand-blue transition">Careers</a>
-        <a href="schedule.html" class="hover:text-brand-blue transition text-brand-red font-bold flex items-center gap-1.5">
-          <i class="fa-regular fa-calendar-check"></i> Schedule Appointment
-        </a>
+
+        <!-- More dropdown -->
+        <div class="relative">
+          <button
+            type="button"
+            id="more-menu-btn"
+            class="flex items-center gap-1.5 hover:text-brand-blue transition"
+            aria-expanded="false"
+            aria-controls="more-menu"
+          >
+            More <i class="fa-solid fa-chevron-down text-[10px]" id="more-menu-chevron"></i>
+          </button>
+          <div id="more-menu" class="hidden absolute top-full left-0 mt-3 w-48 bg-white border border-slate-200 rounded-lg shadow-lg py-2 z-50">
+            <a href="#brands" class="block px-4 py-2 hover:bg-brand-lightGray hover:text-brand-blue transition">Brands</a>
+            <a href="#testimonials" class="block px-4 py-2 hover:bg-brand-lightGray hover:text-brand-blue transition">Testimonials</a>
+            <a href="hvac-tips.html" class="block px-4 py-2 hover:bg-brand-lightGray hover:text-brand-blue transition">HVAC Tips</a>
+            <a href="https://escoinc.easyapply.co" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 hover:bg-brand-lightGray hover:text-brand-blue transition">Careers</a>
+          </div>
+        </div>
       </nav>
 
-      <!-- Header CTA & Phone -->
+      <!-- Header CTA -->
       <div class="flex items-center gap-4">
-        <a href="tel:5184820375" class="hidden lg:flex flex-col text-right leading-tight">
-          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Call Our Office</span>
-          <span class="text-base font-black text-brand-blue hover:text-brand-red transition">(518) 482-0375</span>
-        </a>
         <a href="schedule.html" class="hidden sm:flex bg-brand-red hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-md shadow transition text-sm items-center gap-2">
           <i class="fa-regular fa-calendar-check text-xs"></i>
           <span>Schedule Service</span>
@@ -809,8 +808,9 @@
   </section>
 
   <!-- FOOTER WITH SOCIAL LINKS -->
-  <footer class="bg-brand-navy text-slate-400 py-12 border-t border-slate-800 text-xs sm:text-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+  <footer class="bg-brand-navy text-slate-400 py-10 border-t border-slate-800 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
 
       <!-- Brand & Address -->
       <div class="flex flex-col sm:flex-row items-center gap-4">
@@ -872,11 +872,19 @@
           <i class="fa-brands fa-google text-sm"></i>
         </a>
       </div>
+    </div>
 
-      <!-- Direct Contact -->
-      <div>
-        <a href="service-area.html" class="text-white hover:underline">Service Area</a> | <a href="hvac-tips.html" class="text-white hover:underline">HVAC Tips</a> | Direct: <a href="tel:5184820375" class="text-white font-bold hover:underline">(518) 482-0375</a> | <a href="mailto:info@escohvac.com" class="text-white hover:underline">info@escohvac.com</a>
+    <!-- Quick Links & Contact -->
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-3 mt-8 pt-6 border-t border-slate-800 text-center sm:text-left">
+      <div class="flex items-center gap-4">
+        <a href="service-area.html" class="hover:text-white hover:underline transition">Service Area</a>
+        <a href="hvac-tips.html" class="hover:text-white hover:underline transition">HVAC Tips</a>
+        <a href="https://escoinc.easyapply.co" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline transition">Careers</a>
       </div>
+      <div>
+        <a href="tel:5184820375" class="text-white font-bold hover:underline">(518) 482-0375</a> · <a href="mailto:info@escohvac.com" class="hover:text-white hover:underline transition">info@escohvac.com</a>
+      </div>
+    </div>
     </div>
   </footer>
 
@@ -907,6 +915,45 @@
 
       menu.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', closeMenu);
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('more-menu-btn');
+      var menu = document.getElementById('more-menu');
+      var chevron = document.getElementById('more-menu-chevron');
+      if (!btn || !menu) return;
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        chevron.classList.remove('fa-chevron-up');
+        chevron.classList.add('fa-chevron-down');
+      }
+
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = !menu.classList.contains('hidden');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          menu.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+          chevron.classList.remove('fa-chevron-down');
+          chevron.classList.add('fa-chevron-up');
+        }
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!menu.classList.contains('hidden') && !menu.contains(e.target)) {
+          closeMenu();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
       });
     })();
   </script>
